@@ -1,0 +1,201 @@
+% Based on resume class. http://www.rpi.edu/dept/arc/training/latex/resumes/
+
+% Fixes the lastpage behavior
+\let\nofiles\relax
+
+\documentclass[11pt]{res} 
+
+\usepackage{graphicx}
+\usepackage{multicol}
+
+% Adjust margins
+\usepackage[letterpaper,margin=0.5in]{geometry}
+\setlength{\resumewidth}{7.5in}
+\setlength{\voffset}{-8mm}
+\setlength{\textheight}{10in}
+
+% Array distance between rows
+\renewcommand{\arraystretch}{1.8}
+
+% Hyperlinks
+\usepackage[hidelinks]{hyperref}
+\urlstyle{same}
+
+% Font
+% \usepackage{tgpagella}
+\usepackage[garamond]{mathdesign}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+% \usepackage{fontawesome}
+\usepackage{fontawesome5}
+\usepackage{CormorantGaramond}
+
+\usepackage[many]{tcolorbox}
+
+\newtcolorbox{rightrule}[1][]{blankest, breakable, borderline east={0.5pt}{0mm}{black}, before skip=1mm, right skip=1.3mm, top=2mm, bottom=5mm, right=3mm, colframe=black, colback=white, left=0mm, #1}
+
+% List symbols
+\usepackage{enumitem}
+\setlist[itemize,1]{label={\small \faIcon{angle-right}}}
+\linespread{1}
+
+% Do not indented under section headings
+\newsectionwidth{0pt}  
+
+\topmargin=-1cm 
+
+\usepackage{fancyhdr}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancyhead{}
+\fancyfoot{}
+\fancyfoot[R]{\textit{Last updated: \today}}
+
+\title{Valeriu Balaban Resume}
+
+% Start contents
+\begin{document}
+
+\thispagestyle{fancy}
+
+% Name
+\moveleft.5\hoffset\centerline{\textbf{\Huge Val Balaban}}
+\vspace{2mm}
+
+% Contact
+\moveleft.5\hoffset\centerline{ \textit{\href{mailto:vbalaban@usc.edu}{vbalaban@usc.edu} \enskip $\cdot$ \enskip (213) 275 - 9934 \enskip $\cdot$ \enskip Pasadena, CA \faIcon{map-marker-alt}}}
+
+% Social
+\moveleft.5\hoffset\centerline{\textit{\href{https://www.linkedin.com/in/valeriubalaban}{\faIcon{linkedin} valeriubalaban}  \enskip \enskip \enskip \href{https://github.com/valeriu-balaban}{\faIcon{github} valeriu-balaban}}}
+
+
+\begin{resume}
+\vspace{-12mm}
+
+\begin{tcolorbox}[boxrule=0.5pt, colback=black!3!white]
+
+    Solid system design, software and hardware knowledge -- developed 10+ projects (PCB design, embedded and real-time software, back end, machine learning, and GUI). Devised computer vision algorithms for detection, tracing, and tracking of biological bodies. Published two papers on organizational properties of bacteria and neuron cells. Published two machine learning papers on methods for optimizing robustness and fairness of the trained models. Devised algorithms for hardware and software design using machine learning. 
+
+    \vspace{-2mm}
+    \begin{multicols}{2}
+    \begin{itemize}[label={\footnotesize \faIcon{check}}]   
+        \setlength{\itemsep}{-0.0em}
+        \item \textit{Programming Languages:} {\fontfamily{qcs}\selectfont \footnotesize Python, Matlab, C++, C}
+        \item \textit{Machine Learning:}  {\fontfamily{qcs}\selectfont \footnotesize Pytorch, Pytorch Lightning, W\&B}
+        \item \textit{Image processing:} {\fontfamily{qcs}\selectfont \footnotesize OpenCV, Scikit-Image, SciPy}
+        \item \textit{Operating Systems:} {\fontfamily{qcs}\selectfont \footnotesize Linux, Embedded Linux, ROS}
+        \item \textit{Firmware design:} {\fontfamily{qcs}\selectfont \footnotesize C/ASM for ARM, AVR, 8051}
+        \item \textit{Hardware design:} {\fontfamily{qcs}\selectfont \footnotesize Verilog, KiCAD, Altium}
+    \end{itemize}
+    \end{multicols}
+    \vspace{-4mm}
+\end{tcolorbox}
+
+%
+%--------PROFESSIONAL--------
+%
+%============================
+%      USC
+%============================
+\textbf{\Large \href{http://viterbi.usc.edu/}{University of Southern California \scriptsize \faIcon{external-link-alt}}} \enskip $\cdot$ \enskip Electrical and Computer Engineering
+\hfill       \textbf{2016 -- present} \enskip \enskip\\
+\textit{PhD Candidate (Final Year) \enskip $\cdot$ \enskip Cyber Physical Systems Research Group  \enskip $\cdot$ \enskip \faIcon{microscope}\enskip Annenberg Fellowship \hfill Los Angeles, CA \faIcon{map-marker-alt}}
+
+% Change itemize symbol
+\begin{rightrule}
+\begin{itemize}[parsep=0pt]
+    \item Devised new algorithms for identifying cells from images and investigated their ``social network''. Related publications:
+    \begin{small}
+    \begin{itemize}[label={\faIcon[regular]{file-alt}}, left=0pt]
+        \item \href{https://www.nature.com/articles/s41598-020-72013-7}{\textit{Network science characteristics of brain-derived neuronal cultures deciphered from images.} Accepted in Scientific Reports (2020) \scriptsize \faIcon{external-link-alt}}
+        \item \href{https://www.nature.com/articles/s41598-018-30654-9}{\textit{Quantifying emergence and self-organisation of Enterobacter cloacae microbial communities.} Accepted in Scientific Reports (2018) \scriptsize \faIcon{external-link-alt}}
+    \end{itemize}
+    \end{small}
+    \item Investigated methods for improving robustness and group fairness of machine learning models. Related publications:
+    \begin{small}
+    \begin{itemize}[label={\faIcon[regular]{file-alt}}, left=0pt]
+        \item \textit{Improving Robustness: When and How to Minimize or Maximize the Loss Variance.} Accepted in ICMLA (2022)
+        \item \textit{Optimizing for Individual and Group Fairness using Variance Penalization.} Under review in AAAI (2023)
+    \end{itemize}
+    \end{small}
+    \item Founded Race On -- a competition where students build and race self-driving cars, 1/10 scale models. More info below.
+    \item Instructed (TA) ``Introduction to Embedded Systems'' and ``Software Design Optimization'' classes for 7 semesters. Covered modern C++ concepts (C++20 standard). Implemented an automated grading system using GitHub Actions.
+
+\end{itemize}
+\end{rightrule}
+%============================
+%      Infineon Technologies
+%============================
+\vspace{-6mm}
+\textbf{\Large \href{http://www.infineon.com/}{Infineon Technologies \scriptsize \faIcon{external-link-alt}}} \enskip $\cdot$ \enskip Leader in automotive electronic parts  
+\hfill        \textbf{2014 -- 2016}\enskip \enskip \enskip\\
+\textit{Software/Hardware Engineer \enskip $\cdot$ \enskip  Technology and Methodology Department \hfill  Bucharest, Romania \faIcon{map-marker-alt}}
+
+\begin{rightrule}
+    \begin{itemize}[noitemsep]
+    \item Developed machine learning based strategies for IC design and lab testing that reduced the task time by 15-fold.
+    \item Investigated software controlled power converters which compensate for component degradation or load change.
+    \item Researched and developed motor controllers for lightweight electric vehicles using Matlab/Simulink.
+    \end{itemize}
+\end{rightrule}
+%============================
+%      D&D Technologies
+%============================
+\vspace{-6mm}
+\textbf{\Large D\&D Technologies} \enskip $\cdot$ \enskip Specialists in tax reporting automation
+\hfill                   \textbf{2012 -- 2014}\enskip \enskip \enskip\\
+\textit{Embedded Software Engineer (part-time) \hfill Bucharest, Romania \faIcon{map-marker-alt}}
+
+\begin{rightrule}
+    \begin{itemize}[noitemsep]
+    \item Devised and built a distributed jackpot system with real-time constraints and communication over CAN bus.
+    \item Developed a secure network optimized for real-time data exchange to monitor slot machines for tax reporting purposes.
+    \item Built from scratch a custom-made Linux system optimized for secure monetary transactions.
+    \end{itemize}
+\end{rightrule}
+%============================
+%      UPB
+%============================
+\vspace{-6mm}
+\textbf{\Large \href{http://www.upb.ro/}{University ``Politehnica'' of Bucharest \scriptsize \faIcon{external-link-alt}}}
+\hfill \textbf{2009 -- 2015} \hspace{3mm} \\
+\textit{MS in Microelectronics} \enskip $\cdot$ \enskip \textit{BS in Electrical Engineering} \hfill \textit{Bucharest, Romania \faIcon{map-marker-alt}}
+% \begin{rightrule}[top=0mm, bottom=1mm]
+    % \begin{itemize} 
+    % \item \textbf{MS in Microelectronics} -- Thesis title \textit{``Brushless motor driver using a software-controlled inverter''}
+    % \item \textbf{BS in Electrical Engineering} -- Thesis title \textit{``Behavioural modelling of electrical vehicle inverter''}
+    % \end{itemize}
+% \end{rightrule}
+% $\cdot$ \enskip \textbf{MS in Microelectronics} -- Thesis title \textit{``Brushless motor driver using a software-controlled inverter'' \hfill Bucharest, Romania \faIcon{map-marker-alt}} \\
+% $\cdot$ \enskip \textbf{BS in Electrical Engineering} -- Thesis title \textit{``Behavioural modelling of electrical vehicle inverter''}
+
+% \href{http://www.upb.ro/}{University ``Politehnica'' of Bucharest \scriptsize \faIcon{external-link-alt}} \hfill \textit{Bucharest, Romania \faIcon{map-marker-alt}} \\
+% \textbf{MS in Microelectronics} \enskip $\cdot$ \enskip Thesis title \textit{``Brushless motor driver using a software-controlled inverter''} \hfill \textbf{2013 -- 2015} \hspace{3mm} \\
+% \textbf{BS in Electrical Engineering}  \enskip $\cdot$ \enskip Thesis title \textit{``Behavioural modelling of electrical vehicle inverter''} \hfill \textbf{2009 -- 2013}\enskip \enskip \enskip\\
+ 
+
+
+%----------------------------------
+%           ACTIVITIES
+%----------------------------------
+\vspace{-8mm}
+\begin{center}
+    \rule{7.5in}{0.4pt}
+\end{center}
+\vspace{-6mm}
+
+\textbf{\href{http://raceon.io/}{Race On -- A Self-Driving Car Competition \scriptsize \faIcon{external-link-alt}} -- Founder}  
+\hfill        \textit{\small January 2019 -- present} \\
+Founded and organized a competition for three consecutive semesters that engages students in hardware-software development to build and race a self-driving car. Each semester, we organize a series of workshops that introduce around 40 teams of 2 to 4 graduate students to ROS, control algorithms, real-time image processing techniques, localization and mapping strategies.
+
+
+\textbf{Freescale Embedded Challenge -- First Place} \hfill \textit{\small June -- September 2014} \\
+Led a team that developed a car safety system able to scan and classify objects near the driving road, notifying for potential dangers. The deployed Linux system was built from scratch using Yocto, and optimized for real-time video processing.
+
+
+% \textbf{Freescale Cup, International Competition -- \href{https://youtu.be/gmf_8sHqpfw}{Winning Race Video \faIcon{youtube}}}  \hfill        \textit{\small 2012 -- 2014} \\
+% For three consecutive years, led a team which built and raced an autonomous robotic car. The car included a video camera for track recognition, encoders and IMU sensors for state estimation, and an ARM microcontroller to cotrol the steering. 
+
+\end{resume} 
+
+\end{document}
